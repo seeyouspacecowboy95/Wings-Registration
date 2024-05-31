@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wings Funerals Policy Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/wings.png" alt="Wings Funerals Logo">
+        </div>
+        <h1>Wings Funerals Policy Registration Form</h1>
+    </header>
+
+    <div class="progress-bar">
+        <div class="step active">
+            <span class="circle">1</span>
+            <span class="connector"></span>
+        </div>
+        <div class="step">
+            <span class="circle">2</span>
+            <span class="connector"></span>
+        </div>
+        <div class="step">
+            <span class="circle">3</span>
+            <span class="connector"></span>
+        </div>
+        <div class="step">
+            <span class="circle">4</span>
+            <span class="connector"></span>
+        </div>
+        <div class="step">
+            <span class="circle">5</span>
+            <span class="connector"></span>
+        </div>
+        <div class="step">
+            <span class="circle">6</span>
+        </div>
+    </div>
+
+    <form id="step1">
+        <h2>Main Member</h2>
+        <div>
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" required>
+        </div>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="initials">Initials:</label>
+            <input type="text" id="initials" name="initials" required>
+        </div>
+        <div>
+            <label for="idType">Identification Type:</label>
+            <select id="idType" name="idType" required>
+                <option value="">Select ID Type</option>
+                <option value="id">ID</option>
+                <option value="passport">Passport</option>
+            </select>
+        </div>
+        <div id="idNumberField" style="display: none;">
+            <label for="idNumber">ID Number:</label>
+            <input type="text" id="idNumber" name="idNumber" pattern="\d{13}" maxlength="13"
+                placeholder="Enter 13 digits" required>
+        </div>
+        <div id="passportNumberField" style="display: none;">
+            <label for="passportNumber">Passport Number:</label>
+            <input type="text" id="passportNumber" name="passportNumber" required>
+        </div>
+
+        <h2>Spouse (Optional)</h2>
+        <div>
+            <label for="spouseSurname">Surname:</label>
+            <input type="text" id="spouseSurname" name="spouseSurname">
+        </div>
+        <div>
+            <label for="spouseName">Name:</label>
+            <input type="text" id="spouseName" name="spouseName">
+        </div>
+        <div>
+            <label for="spouseInitials">Initials:</label>
+            <input type="text" id="spouseInitials" name="spouseInitials">
+        </div>
+        <div>
+            <label for="spouseIdType">Identification Type:</label>
+            <select id="spouseIdType" name="spouseIdType">
+                <option value="">Select ID Type</option>
+                <option value="id">ID</option>
+                <option value="passport">Passport</option>
+            </select>
+        </div>
+        <div id="spouseIdNumberField" style="display: none;">
+            <label for="spouseIdNumber">ID Number:</label>
+            <input type="text" id="spouseIdNumber" name="spouseIdNumber" pattern="\d{13}" maxlength="13"
+                placeholder="Enter 13 digits">
+        </div>
+        <div id="spousePassportNumberField" style="display: none;">
+            <label for="spousePassportNumber">Passport Number:</label>
+            <input type="text" id="spousePassportNumber" name="spousePassportNumber">
+        </div>
+    </form>
+
+    <!-- Page 2 -->
+    <form id="step2" style="display: none;">
+        <h2>Children (Immediate Family)</h2>
+        <div id="childrenContainer"></div>
+        <button id="addChildBtn">Add Child</button>
+    </form>
+
+    <div class="button-container">
+        <button id="prevBtn" disabled>Previous</button>
+        <button id="nextBtn">Next</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
